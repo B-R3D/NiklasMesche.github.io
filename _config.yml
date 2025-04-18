@@ -1,1 +1,27 @@
-theme: none  
+# _config.yml (place in root folder of your repo)
+
+# Disable Jekyll theming and plugins
+theme: none
+plugins: []
+
+# Force GitHub Pages to use your custom files
+include: [".htaccess"]  # Prevents file ignore issues
+exclude: ["Gemfile", "Gemfile.lock", "node_modules"]  # Speed up builds
+
+# Markdown processing (prevents link-breaking)
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Disable GitHub's auto-generated assets
+sass:
+  style: compressed  # Prevents CSS conflicts
+
+# Optional: Set default permalinks (prevents broken links)
+permalink: pretty
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: none  # Bypasses Jekyll layouts
