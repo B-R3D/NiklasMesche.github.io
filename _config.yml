@@ -1,1 +1,21 @@
-theme: none  
+# _config.yml
+title: Berserk Chronicle
+description: A timeline of Berserk's story arcs
+
+# Disable Jekyll processing
+theme: minimal # Required but minimal theme
+plugins: [] # Disable all plugins
+markdown: kramdown
+
+# Explicit includes/excludes
+include:
+  - CSS/
+  - images/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+
+# Permalinks (prevents broken links)
+permalink: pretty
