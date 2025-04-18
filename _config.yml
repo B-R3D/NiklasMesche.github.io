@@ -1,21 +1,20 @@
-# _config.yml
-title: Berserk Chronicle
-description: A timeline of Berserk's story arcs
+# _config.yml - Minimal working version for GitHub Pages
 
-# Disable Jekyll processing
-theme: minimal # Required but minimal theme
-plugins: [] # Disable all plugins
+# REMOVE 'theme: none' completely (it's causing the error)
+# Instead use:
+theme: jekyll-theme-minimal  # This is a valid empty theme
+
+# Disable all plugins to prevent interference
+plugins: []
+
+# Force proper Markdown processing
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 
-# Explicit includes/excludes
-include:
-  - CSS/
-  - images/
+# Explicitly exclude GitHub's default files
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  - node_modules
-
-# Permalinks (prevents broken links)
-permalink: pretty
